@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+@import './variables.scss';
+
+* {
+    font-family: 'Didact Gothic';
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $background;
+}
+
+.inputArea {
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    #wordContainer {
+        max-width: 30em;
+
+        #textToType {
+            font-size: 1.25em;
+        }
+    }
+}
+
+.navbar {
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        background-color: $background;
+        border: none
+    }
+
+    .icons {
+        display: flex;
+        gap: 1.5em;
+    }
+}
