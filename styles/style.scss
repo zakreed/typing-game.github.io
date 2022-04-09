@@ -21,12 +21,22 @@ body {
     height: 100vh;
 
     #wordContainer {
-        max-width: 30em;
+        max-width: 40em;
 
         #textToType {
-            font-size: 1.25em;
+            font-size: 1.5em;
         }
     }
+
+    #inputField{
+        font-size: 16px;
+        border: solid black 2px;
+        border-radius: 8px;
+        height: 3em;
+        width: 24em;
+        padding:0.5em;
+    }
+
 }
 
 .navbar {
@@ -40,7 +50,8 @@ body {
 
     button {
         background-color: $background;
-        border: none
+        border: none;
+        cursor: pointer;
     }
 
     .icons {
