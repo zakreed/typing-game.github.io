@@ -30,13 +30,16 @@ body {
 
     #inputField{
         font-size: 16px;
-        border: solid black 2px;
+        border: none;
         border-radius: 8px;
         height: 3em;
         width: 24em;
         padding:0.5em;
-    }
 
+        &:focus {
+            outline: solid black 2px;
+        }
+    }
 }
 
 .navbar {
