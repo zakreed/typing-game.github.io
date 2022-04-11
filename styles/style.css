@@ -11,6 +11,11 @@ body {
   background-color: #F5F5F5;
 }
 
+.svg {
+  width: 32px;
+  height: 32px;
+}
+
 .inputArea {
   display: -webkit-box;
   display: -ms-flexbox;
