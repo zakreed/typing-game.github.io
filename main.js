@@ -1,6 +1,6 @@
 import {words} from './words.js';
 
-const wordsToTypeElement = document.getElementById('textToType');
+const textContentElement = document.getElementById('text-content');
 
 const generateText = () => {
     let textToType = '';
@@ -11,5 +11,5 @@ const generateText = () => {
     return textToType;
 }
 
-wordsToTypeElement.innerText = generateText();
+textContentElement.innerText = generateText();
 console.log(Math.floor(Math.random() * 1000));

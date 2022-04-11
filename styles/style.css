@@ -16,46 +16,7 @@ body {
   height: 32px;
 }
 
-.inputArea {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 4em;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100vh;
-}
-
-.inputArea #wordContainer {
-  max-width: 40em;
-}
-
-.inputArea #wordContainer #textToType {
-  font-size: 1.5em;
-}
-
-.inputArea #inputField {
-  font-size: 16px;
-  border: none;
-  border-radius: 8px;
-  height: 3em;
-  width: 24em;
-  padding: 0.5em;
-}
-
-.inputArea #inputField:focus {
-  outline: solid black 2px;
-}
-
-.navbar {
+#navbar {
   padding: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -65,20 +26,59 @@ body {
           justify-content: space-between;
 }
 
-.navbar h1 {
+#navbar h1 {
   font-size: 1.5rem;
 }
 
-.navbar button {
+#navbar button {
   background-color: #F5F5F5;
   border: none;
   cursor: pointer;
 }
 
-.navbar .icons {
+#navbar .icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 1.5em;
+}
+
+#input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4em;
+  height: 100vh;
+}
+
+#input-container #text-container {
+  max-width: 40em;
+}
+
+#input-container #text-container #text-content {
+  font-size: 1.5em;
+}
+
+#input-container #input-field {
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  height: 3em;
+  width: 24em;
+  padding: 0.5em;
+}
+
+#input-container #input-field:focus {
+  outline: solid black 2px;
 }
 /*# sourceMappingURL=style.css.map */

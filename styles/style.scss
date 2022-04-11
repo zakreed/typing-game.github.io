@@ -12,37 +12,12 @@ body {
     background-color: $background;
 }
 
-.inputArea {
-    display: flex;
-    flex-direction: column;
-    gap: 4em;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-
-    #wordContainer {
-        max-width: 40em;
-
-        #textToType {
-            font-size: 1.5em;
-        }
-    }
-
-    #inputField{
-        font-size: 16px;
-        border: none;
-        border-radius: 8px;
-        height: 3em;
-        width: 24em;
-        padding:0.5em;
-
-        &:focus {
-            outline: solid black 2px;
-        }
-    }
+.svg {
+    width: 32px;
+    height: 32px;
 }
 
-.navbar {
+#navbar {
     padding: 1em;
     display: flex;
     justify-content: space-between;
@@ -62,3 +37,35 @@ body {
         gap: 1.5em;
     }
 }
+
+
+#input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+    height: 100vh;
+
+    #text-container {
+        max-width: 40em;
+
+        #text-content {
+            font-size: 1.5em;
+        }
+    }
+
+    #input-field{
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        height: 3em;
+        width: 24em;
+        padding:0.5em;
+
+        &:focus {
+            outline: solid black 2px;
+        }
+    }
+}
+
