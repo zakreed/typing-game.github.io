@@ -38,7 +38,6 @@ body {
     }
 }
 
-
 #input-container {
     display: flex;
     flex-direction: column;
@@ -49,6 +48,7 @@ body {
 
     #text-container {
         max-width: 40em;
+        user-select: none;
 
         #text-content {
             font-size: 1.5em;
@@ -69,3 +69,14 @@ body {
     }
 }
 
+.next-word {
+    font-weight: bold;
+}
+
+.correct {
+    color: #619F56;
+}
+
+.incorrect {
+    color: #E34C4C;
+}

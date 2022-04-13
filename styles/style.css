@@ -63,6 +63,10 @@ body {
 
 #input-container #text-container {
   max-width: 40em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 #input-container #text-container #text-content {
@@ -80,5 +84,17 @@ body {
 
 #input-container #input-field:focus {
   outline: solid black 2px;
+}
+
+.next-word {
+  font-weight: bold;
+}
+
+.correct {
+  color: #619F56;
+}
+
+.incorrect {
+  color: #E34C4C;
 }
 /*# sourceMappingURL=style.css.map */
