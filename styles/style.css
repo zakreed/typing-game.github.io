@@ -16,7 +16,25 @@ body {
   height: 32px;
 }
 
-#navbar {
+#parent-div {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+#parent-div #main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  max-width: 64em;
+}
+
+#parent-div #main-content #navbar {
   padding: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -26,42 +44,45 @@ body {
           justify-content: space-between;
 }
 
-#navbar h1 {
+#parent-div #main-content #navbar h1 {
   font-size: 1.5rem;
 }
 
-#navbar button {
+#parent-div #main-content #navbar button {
   background-color: #F5F5F5;
   border: none;
   cursor: pointer;
 }
 
-#navbar .icons {
+#parent-div #main-content #navbar .icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 1.5em;
 }
 
-#input-container {
+#parent-div #main-content #input-container {
+  padding: 1.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 4em;
-  height: 100vh;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
-#input-container #text-container {
+#parent-div #main-content #input-container #text-container {
   max-width: 40em;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -69,20 +90,19 @@ body {
           user-select: none;
 }
 
-#input-container #text-container #text-content {
+#parent-div #main-content #input-container #text-container #text-content {
   font-size: 1.5em;
 }
 
-#input-container #input-field {
+#parent-div #main-content #input-container #input-field {
   font-size: 16px;
   border: none;
   border-radius: 8px;
-  height: 3em;
-  width: 24em;
+  width: 20em;
   padding: 0.5em;
 }
 
-#input-container #input-field:focus {
+#parent-div #main-content #input-container #input-field:focus {
   outline: solid black 2px;
 }
 
@@ -91,10 +111,10 @@ body {
 }
 
 .correct {
-  color: #619F56;
+  color: #40D84F;
 }
 
 .incorrect {
-  color: #E34C4C;
+  color: #FF2222;
 }
 /*# sourceMappingURL=style.css.map */

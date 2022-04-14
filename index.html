@@ -4,31 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Typing test</title>
     <script type="module" src="main.js" defer></script>
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <div id="main-div">
-        <nav id="navbar">
-            <h1>Typing test</h1>
-            <div class="icons">
-                <a href="https://github.com/zakreed/typing-game" target="_blank">
-                    <button id="iconGithub">
-                        <img src="./assets/github.svg" alt="github" class="svg">
+    <div id="parent-div">
+        <div id="main-content">
+            <nav id="navbar">
+                <h1>Typing test</h1>
+                <div class="icons">
+                    <a href="https://github.com/zakreed/typing-game" target="_blank">
+                        <button id="iconGithub">
+                            <img src="./assets/github.svg" alt="github" class="svg">
+                        </button>
+                    </a>
+                    <button id="iconSettings">
+                        <img src="./assets/gear-fill.svg" alt="settings" class="svg">
                     </button>
-                </a>
-                <button id="iconSettings">
-                    <img src="./assets/gear-fill.svg" alt="settings" class="svg">
-                </button>
+                </div>
+            </nav>
+    
+            <div id="input-container">
+                <div id="text-container">
+                    <div id="text-content"></div>
+                </div>
+                <input id="input-field" type="text">
             </div>
-        </nav>
-
-        <div id="input-container">
-            <div id="text-container">
-                <div id="text-content"></div>
-            </div>
-            <input id="input-field" type="text">
         </div>
     </div>
 </body>
