@@ -5,21 +5,27 @@ const inputFieldElement = document.getElementById('input-field');
 const restartButtonElement = document.getElementById('restart');
 const timerElement = document.getElementById('timer');
 
-let numberOfWords = 10;
+let numberOfWords = 25;
 let completed = false;
 let timerHasStarted = false;
-let time;
-let timer;
-
-const resetTimer = () => time = 0;
+let startTimeDate;
+let timerSeconds = 0;
+let timerMiliseconds =  0;
 
 const updateTimer = () => {
-    time++;
-    timerElement.innerText = time;
+    let date = new Date();
+    timerMiliseconds = date - startTimeDate;
+    timerSeconds = Math.round(((date - startTimeDate) / 1000) * 100) / 100;
+    timerElement.innerText = `${timerSeconds.toString().padStart(5, '0')}`;
 }
 
+const stopTimer = () => clearInterval(timer);
+
 const startTimer = () => {
-    timerElement.innerText = 0;
+    timerSeconds = 0;
+    timerMiliseconds = 0;
+    startTimeDate = new Date();
+    timerElement.innerText = '00.00';
 }
 
 const generateText = () => {
@@ -47,9 +53,8 @@ inputFieldElement.addEventListener('input', () => {
     const inputArray = inputFieldElement.value.split('');
 
     if(inputArray[0] != '' && !completed && !timerHasStarted) {
-        resetTimer();
         startTimer();
-        timer = setInterval(updateTimer, 1000);
+        timer = setInterval(updateTimer, 1);
         timerHasStarted = true;
     }
 
@@ -74,7 +79,7 @@ inputFieldElement.addEventListener('input', () => {
 
     if (inputArray.length == textArray.length) {
         completed = true;
-        clearInterval(timer);
+        stopTimer();
     }
 })
 
@@ -83,6 +88,7 @@ restartButtonElement.addEventListener('click', () => {
     textContentElement.innerHTML = '';
     completed = false;
     timerHasStarted = false;
+    stopTimer();
     generateText();
     inputFieldElement.focus();
 });
