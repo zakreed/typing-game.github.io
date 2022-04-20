@@ -12,15 +12,19 @@ body {
     background-color: $background;
 }
 
+svg {
+    &:hover {
+        fill: #414141;
+    }
+    &:active {
+        fill: #6B6B6B;
+    }
+}
+
 button {
     background-color: $background;
     border: none;
     cursor: pointer;
-}
-
-.svg {
-    width: 32px;
-    height: 32px;
 }
 
 #parent-div {

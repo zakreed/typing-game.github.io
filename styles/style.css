@@ -11,15 +11,18 @@ body {
   background-color: #F5F5F5;
 }
 
+svg:hover {
+  fill: #414141;
+}
+
+svg:active {
+  fill: #6B6B6B;
+}
+
 button {
   background-color: #F5F5F5;
   border: none;
   cursor: pointer;
-}
-
-.svg {
-  width: 32px;
-  height: 32px;
 }
 
 #parent-div {

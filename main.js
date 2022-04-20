@@ -4,28 +4,29 @@ const textContentElement = document.getElementById('text-content');
 const inputFieldElement = document.getElementById('input-field');
 const restartButtonElement = document.getElementById('restart');
 const timerElement = document.getElementById('timer');
+const wpmElement = document.getElementById('wpm');
 
-let numberOfWords = 25;
+let numberOfWords = 15;
 let completed = false;
-let timerHasStarted = false;
-let startTimeDate;
+let testHasStarted = false;
 let timerSeconds = 0;
-let timerMiliseconds =  0;
-
-const updateTimer = () => {
-    let date = new Date();
-    timerMiliseconds = date - startTimeDate;
-    timerSeconds = Math.round(((date - startTimeDate) / 1000) * 100) / 100;
-    timerElement.innerText = `${timerSeconds.toString().padStart(5, '0')}`;
-}
-
-const stopTimer = () => clearInterval(timer);
+let startTimeDate;
 
 const startTimer = () => {
     timerSeconds = 0;
-    timerMiliseconds = 0;
     startTimeDate = new Date();
-    timerElement.innerText = '00.00';
+    timerElement.innerText = '000';
+}
+const updateTimer = () => {
+    let date = new Date();
+    timerSeconds = Math.floor((date - startTimeDate) / 1000);
+    timerElement.innerText = `${timerSeconds.toString().padStart(3, '0')}`;
+}
+const stopTimer = () => clearInterval(timer);
+
+const startTest = () => {
+    startTimer();
+    timer = setInterval(updateTimer, 1);
 }
 
 const generateText = () => {
@@ -52,10 +53,9 @@ inputFieldElement.addEventListener('input', () => {
     const textArray = textContentElement.querySelectorAll('span');
     const inputArray = inputFieldElement.value.split('');
 
-    if(inputArray[0] != '' && !completed && !timerHasStarted) {
-        startTimer();
-        timer = setInterval(updateTimer, 1);
-        timerHasStarted = true;
+    if(inputArray[0] != '' && !completed && !testHasStarted) {
+        startTest();
+        testHasStarted = true;
     }
 
     if (!completed) {
@@ -80,14 +80,31 @@ inputFieldElement.addEventListener('input', () => {
     if (inputArray.length == textArray.length) {
         completed = true;
         stopTimer();
+        calculateWPM();
     }
 })
+
+const calculateWPM = () => {
+    const wpmTextArray = textContentElement.querySelectorAll('span');
+    const timeTaken = timerElement.innerText;
+    let correctCharacters = 0;
+
+    wpmTextArray.forEach(element => {
+        if (element.classList.contains('correct')) {
+            correctCharacters++;
+        }
+    });
+
+    let words = correctCharacters / 5;
+    let wpm = Math.floor(words / (timeTaken / 60));
+    wpmElement.innerText = `${wpm} wpm`;
+}
 
 restartButtonElement.addEventListener('click', () => {
     inputFieldElement.value = '';
     textContentElement.innerHTML = '';
     completed = false;
-    timerHasStarted = false;
+    testHasStarted = false;
     stopTimer();
     generateText();
     inputFieldElement.focus();
