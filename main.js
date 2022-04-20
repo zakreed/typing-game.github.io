@@ -6,7 +6,7 @@ const restartButtonElement = document.getElementById('restart');
 const timerElement = document.getElementById('timer');
 const wpmElement = document.getElementById('wpm');
 
-let numberOfWords = 5;
+let numberOfWords = 25;
 let completed = false;
 let testHasStarted = false;
 let timerSeconds = 0;
@@ -20,8 +20,8 @@ const startTimer = () => {
 }
 const updateTimer = () => {
     let date = new Date();
-    timerSeconds = Math.floor((date - startTimeDate) / 1000);
-    timerElement.innerText = `${timerSeconds.toString().padStart(3, '0')}`;
+    timerSeconds = (date - startTimeDate) / 1000;
+    timerElement.innerText = `${Math.floor(timerSeconds).toString().padStart(3, '0')}`;
 }
 const stopTimer = () => clearInterval(timer);
 
@@ -87,7 +87,6 @@ inputFieldElement.addEventListener('input', () => {
 
 const calculateWPM = () => {
     const wpmTextArray = textContentElement.querySelectorAll('span');
-    const timeTaken = timerElement.innerText;
     let correctCharacters = 0;
 
     wpmTextArray.forEach(element => {
@@ -97,8 +96,9 @@ const calculateWPM = () => {
     });
 
     let words = correctCharacters / 5;
-    let wpm = Math.floor(words / (timeTaken / 60));
+    let wpm = Math.floor(words / (timerSeconds / 60));
     wpmElement.innerText = `${wpm} wpm`;
+    console.log(timerSeconds);
 }
 
 restartButtonElement.addEventListener('click', () => {
@@ -111,7 +111,7 @@ restartButtonElement.addEventListener('click', () => {
     inputFieldElement.focus();
 });
 
-textContentElement.addEventListener('click', () => inputFieldElement.focus());
+document.body.addEventListener('click', () => inputFieldElement.focus());
 
 //prevent the user from highlighting or pasting text into the input field
 inputFieldElement.onpaste = (e) => {
