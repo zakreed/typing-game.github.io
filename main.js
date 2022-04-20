@@ -6,11 +6,12 @@ const restartButtonElement = document.getElementById('restart');
 const timerElement = document.getElementById('timer');
 const wpmElement = document.getElementById('wpm');
 
-let numberOfWords = 15;
+let numberOfWords = 5;
 let completed = false;
 let testHasStarted = false;
 let timerSeconds = 0;
 let startTimeDate;
+let timer;
 
 const startTimer = () => {
     timerSeconds = 0;
