@@ -1,12 +1,18 @@
 import {words} from './words.js';
 
-const textContentElement = document.getElementById('text-content');
+const settingsButtonElement = document.getElementById('icon-settings');
+const settingsMenuElement = document.getElementById('settings-menu');
+const settingsSaveAndCloseButton = document.getElementById('button-close-settings');
+
+const mainContentElement = document.getElementById('main-content')
+const inputContainerElement = document.getElementById('input-container');
+const textContainerElement = document.getElementById('text-container');
 const inputFieldElement = document.getElementById('input-field');
 const restartButtonElement = document.getElementById('restart');
 const timerElement = document.getElementById('timer');
 const wpmElement = document.getElementById('wpm');
 
-let numberOfWords = 25;
+let numberOfWords = 30;
 let completed = false;
 let testHasStarted = false;
 let timerSeconds = 0;
@@ -41,17 +47,16 @@ const generateText = () => {
     textToType.split('').forEach(word => {
         const wordSpan = document.createElement('span');
         wordSpan.innerText = word;
-        textContentElement.appendChild(wordSpan);
+        textContainerElement.appendChild(wordSpan);
     });
 
     inputFieldElement.value = null;
     startTimer();
     return textToType;
 }
-generateText();
 
 inputFieldElement.addEventListener('input', () => {
-    const textArray = textContentElement.querySelectorAll('span');
+    const textArray = textContainerElement.querySelectorAll('span');
     const inputArray = inputFieldElement.value.split('');
 
     if(inputArray[0] != '' && !completed && !testHasStarted) {
@@ -86,7 +91,7 @@ inputFieldElement.addEventListener('input', () => {
 })
 
 const calculateWPM = () => {
-    const wpmTextArray = textContentElement.querySelectorAll('span');
+    const wpmTextArray = textContainerElement.querySelectorAll('span');
     let correctCharacters = 0;
 
     wpmTextArray.forEach(element => {
@@ -103,7 +108,8 @@ const calculateWPM = () => {
 
 restartButtonElement.addEventListener('click', () => {
     inputFieldElement.value = '';
-    textContentElement.innerHTML = '';
+    textContainerElement.innerText = '';
+    wpmElement.innerText = '';
     completed = false;
     testHasStarted = false;
     stopTimer();
@@ -111,9 +117,22 @@ restartButtonElement.addEventListener('click', () => {
     inputFieldElement.focus();
 });
 
-document.body.addEventListener('click', () => inputFieldElement.focus());
+settingsButtonElement.addEventListener('click', () => {
+    settingsMenuElement.style.display = '';
+    mainContentElement.style.filter = 'blur(2px)';
+    inputFieldElement.blur()
+})
 
-//prevent the user from highlighting or pasting text into the input field
+settingsSaveAndCloseButton.addEventListener('click', () => {
+    settingsMenuElement.style.display = 'none';
+    mainContentElement.style.filter = '';
+    inputFieldElement.focus();
+})
+
+
+inputContainerElement.addEventListener('click', () => inputFieldElement.focus());
+
+// prevent the user from highlighting or pasting text into the input field
 inputFieldElement.onpaste = (e) => {
     e.preventDefault();
     return false;
@@ -121,3 +140,6 @@ inputFieldElement.onpaste = (e) => {
 inputFieldElement.addEventListener('select', function() {
     this.selectionStart = this.selectionEnd;
   }, false);
+
+  generateText();
+  settingsMenuElement.style.display = 'none';

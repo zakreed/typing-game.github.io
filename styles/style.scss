@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @import './variables.scss';
 
 * {
-    font-family: 'Didact Gothic';
+    font-family: 'Inter';
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -10,6 +11,7 @@
 
 body {
     background-color: $background;
+    // filter: blur(3px);
 }
 
 svg {
@@ -22,14 +24,63 @@ svg {
 }
 
 button {
-    background-color: $background;
     border: none;
     cursor: pointer;
+}
+
+.button-main {
+    background-color: $background;
 }
 
 #parent-div {
     display: grid;
     place-items: center;
+
+    #settings-menu {
+        max-width: 40em;
+        max-height: 50em;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        padding: 20px;
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+        #settings-header {
+            padding-bottom: 1em;
+            text-align: center;
+        }
+
+        div {
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
+        
+
+        #settings-words {
+            display: flex;
+            gap: 8px;
+        }
+
+        #settings-theme {
+            display: flex;
+            gap: 8px;
+        }
+
+        #settings-button-container {
+            display: flex;
+            justify-content: center;
+
+            button {
+                border: none;
+                background-color: white;
+            }
+        }
+
+    }
 
     #main-content {
         display: flex;
@@ -37,6 +88,7 @@ button {
         height: 100vh;
         width: 100%;
         max-width: 64em;
+        // filter: blur(3px);
         
         #navbar {
             padding: 1em;
@@ -61,14 +113,12 @@ button {
             flex-direction: column;
             gap: 4em;
             flex-grow: 1;
+
         
             #text-container {
-                max-width: 40em;
+                max-width: 30em;
                 user-select: none;
-        
-                #text-content {
-                    font-size: 1.5em;
-                }
+                font-size: 1.5em;
             }
 
             #reset-container {
