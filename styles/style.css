@@ -218,6 +218,10 @@ button {
           box-shadow: rgba(149, 157, 165, 0.2) 4px 4px 12px;
 }
 
+#parent-div #settings-menu #settings-button-container button:hover {
+  background-color: #3CC84A;
+}
+
 #parent-div #main-content {
   display: -webkit-box;
   display: -ms-flexbox;

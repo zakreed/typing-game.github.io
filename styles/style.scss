@@ -184,6 +184,9 @@ button {
                 color: white;
                 background-color: #40D84F;
                 box-shadow: rgba(149, 157, 165, 0.2) 4px 4px 12px;
+                &:hover {
+                    background-color: #3CC84A;
+                }
             }
         }
 
