@@ -96,10 +96,24 @@ button {
   padding: 15px 0;
   background-color: #40D84F;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 #parent-div #settings-menu #themes-container .solarized-font {
   font-size: 11px;
+}
+
+#parent-div #settings-menu #themes-container .theme-selected {
+  border: #40D84F solid;
+}
+
+#parent-div #settings-menu #themes-container #theme-light {
+  color: black;
+  background-color: #F5F5F5;
+}
+
+#parent-div #settings-menu #themes-container #theme-light:hover {
+  background-color: #E2E2E2;
 }
 
 #parent-div #settings-menu #settings-button-container {

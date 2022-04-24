@@ -87,11 +87,25 @@ button {
                 padding: 15px 0;
                 background-color: #40D84F;
                 border-radius: 8px;
+                cursor: pointer;
             }
 
             .solarized-font {
                 font-size: 11px;
             }
+
+            .theme-selected {
+                border: #40D84F solid;
+            }
+
+            #theme-light {
+                color: black;
+                background-color: #F5F5F5;
+                &:hover {
+                    background-color: #E2E2E2;
+                }
+            }
+
         }
 
 
