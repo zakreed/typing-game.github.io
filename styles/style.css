@@ -84,12 +84,22 @@ button {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 8px;
 }
 
 #parent-div #settings-menu #themes-container .theme-element {
+  width: 85px;
+  height: 50px;
+  font-size: 14px;
+  text-align: center;
   padding: 0.5em;
+  padding: 15px 0;
   background-color: #40D84F;
   border-radius: 8px;
+}
+
+#parent-div #settings-menu #themes-container .solarized-font {
+  font-size: 11px;
 }
 
 #parent-div #settings-menu #settings-button-container {
@@ -103,8 +113,9 @@ button {
 
 #parent-div #settings-menu #settings-button-container button {
   border: none;
+  font-size: medium;
   border-radius: 4px;
-  padding: 6px;
+  padding: 8px;
   color: white;
   background-color: #40D84F;
   -webkit-box-shadow: rgba(149, 157, 165, 0.2) 4px 4px 12px;
