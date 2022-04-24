@@ -105,7 +105,70 @@ button {
                     background-color: #E2E2E2;
                 }
             }
-
+            #theme-dark {
+                color: white;
+                background-color: #263238;
+                &:hover {
+                    background-color: #151A1D;
+                }
+            }
+            #theme-white {
+                color: black;
+                background-color: white;
+                border: black solid;
+                &:hover {
+                    background-color: #F5F5F5;
+                }
+            }
+            #theme-black {
+                color: white;
+                background-color: black;
+                &:hover {
+                    background-color: #2B2B2B;
+                }
+            }
+            #theme-pastel {
+                color: black;
+                background-color: #FFF2F2;
+                &:hover {
+                    background-color: #F6D9D9;
+                }
+            }
+            #theme-nord-light {
+                color: #2E3440;
+                background-color: #E5E9f0;
+                &:hover {
+                    background-color: #D8DEE9;
+                }
+            }
+            #theme-nord-dark {
+                color: #ECEFF4;
+                background-color: #3B4252;
+                &:hover {
+                    background-color: #2E3440;
+                }
+            }
+            #theme-solarized-light {
+                color: black;
+                background-color: #FDF6E3;
+                &:hover {
+                    background-color: #EEE8D5;
+                }
+            }
+            #theme-solarized-dark {
+                color: white;
+                background-color: #002B36;
+                &:hover {
+                    background-color: #073642;
+                }
+            }
+            #theme-dracula {
+                color: #BD93F9;
+                background-color: #282A36;
+                &:hover {
+                    background-color: #44475A;
+                }
+            }
         }
 
 

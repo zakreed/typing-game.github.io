@@ -116,6 +116,88 @@ button {
   background-color: #E2E2E2;
 }
 
+#parent-div #settings-menu #themes-container #theme-dark {
+  color: white;
+  background-color: #263238;
+}
+
+#parent-div #settings-menu #themes-container #theme-dark:hover {
+  background-color: #151A1D;
+}
+
+#parent-div #settings-menu #themes-container #theme-white {
+  color: black;
+  background-color: white;
+  border: black solid;
+}
+
+#parent-div #settings-menu #themes-container #theme-white:hover {
+  background-color: #F5F5F5;
+}
+
+#parent-div #settings-menu #themes-container #theme-black {
+  color: white;
+  background-color: black;
+}
+
+#parent-div #settings-menu #themes-container #theme-black:hover {
+  background-color: #2B2B2B;
+}
+
+#parent-div #settings-menu #themes-container #theme-pastel {
+  color: black;
+  background-color: #FFF2F2;
+}
+
+#parent-div #settings-menu #themes-container #theme-pastel:hover {
+  background-color: #F6D9D9;
+}
+
+#parent-div #settings-menu #themes-container #theme-nord-light {
+  color: #2E3440;
+  background-color: #E5E9f0;
+}
+
+#parent-div #settings-menu #themes-container #theme-nord-light:hover {
+  background-color: #D8DEE9;
+}
+
+#parent-div #settings-menu #themes-container #theme-nord-dark {
+  color: #ECEFF4;
+  background-color: #3B4252;
+}
+
+#parent-div #settings-menu #themes-container #theme-nord-dark:hover {
+  background-color: #2E3440;
+}
+
+#parent-div #settings-menu #themes-container #theme-solarized-light {
+  color: black;
+  background-color: #FDF6E3;
+}
+
+#parent-div #settings-menu #themes-container #theme-solarized-light:hover {
+  background-color: #EEE8D5;
+}
+
+#parent-div #settings-menu #themes-container #theme-solarized-dark {
+  color: white;
+  background-color: #002B36;
+}
+
+#parent-div #settings-menu #themes-container #theme-solarized-dark:hover {
+  background-color: #073642;
+}
+
+#parent-div #settings-menu #themes-container #theme-dracula {
+  color: #BD93F9;
+  background-color: #282A36;
+}
+
+#parent-div #settings-menu #themes-container #theme-dracula:hover {
+  background-color: #44475A;
+}
+
 #parent-div #settings-menu #settings-button-container {
   display: -webkit-box;
   display: -ms-flexbox;
