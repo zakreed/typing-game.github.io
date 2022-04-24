@@ -49,30 +49,45 @@ button {
         border-radius: 12px;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
+        .bold-title {
+            font-size: 1.2em;
+            font-weight: 400;
+        }
+
         #settings-header {
-            padding-bottom: 1em;
-            text-align: center;
-        }
-
-        div {
-            padding-top: 1em;
-            padding-bottom: 1em;
-        }
-        
-
-        #settings-words {
-            display: flex;
-            gap: 8px;
-        }
-
-        #settings-theme {
-            display: flex;
-            gap: 8px;
+            padding-bottom: 16px;
         }
 
         #settings-button-container {
+            padding-top: 16px;
+        }
+        
+        .settings-subcontainer {
             display: flex;
-            justify-content: center;
+            gap: 8px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+        }
+
+        #word-count-list {
+            display: flex;
+        }
+
+        #themes-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+            .theme-element {
+                padding: 0.5em;
+                background-color: #40D84F;
+                border-radius: 8px;
+            }
+        }
+
+
+        #settings-button-container {
+            display: flex;
+            justify-content: flex-end;
 
             button {
                 border: none;
@@ -80,6 +95,7 @@ button {
                 padding: 6px;
                 color: white;
                 background-color: #40D84F;
+                box-shadow: rgba(149, 157, 165, 0.2) 4px 4px 12px;
             }
         }
 

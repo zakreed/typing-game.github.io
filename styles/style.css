@@ -51,37 +51,54 @@ button {
           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
+#parent-div #settings-menu .bold-title {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
 #parent-div #settings-menu #settings-header {
-  padding-bottom: 1em;
-  text-align: center;
+  padding-bottom: 16px;
 }
 
-#parent-div #settings-menu div {
-  padding-top: 1em;
-  padding-bottom: 1em;
+#parent-div #settings-menu #settings-button-container {
+  padding-top: 16px;
 }
 
-#parent-div #settings-menu #settings-words {
+#parent-div #settings-menu .settings-subcontainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
-#parent-div #settings-menu #settings-theme {
+#parent-div #settings-menu #word-count-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+}
+
+#parent-div #settings-menu #themes-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#parent-div #settings-menu #themes-container .theme-element {
+  padding: 0.5em;
+  background-color: #40D84F;
+  border-radius: 8px;
 }
 
 #parent-div #settings-menu #settings-button-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 #parent-div #settings-menu #settings-button-container button {
@@ -90,6 +107,8 @@ button {
   padding: 6px;
   color: white;
   background-color: #40D84F;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 4px 4px 12px;
+          box-shadow: rgba(149, 157, 165, 0.2) 4px 4px 12px;
 }
 
 #parent-div #main-content {
