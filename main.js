@@ -3,6 +3,7 @@ import {words} from './words.js';
 const settingsButtonElement = document.getElementById('icon-settings');
 const settingsMenuElement = document.getElementById('settings-menu');
 const settingsSaveAndCloseButton = document.getElementById('button-close-settings');
+const settingsThemeElements = document.getElementsByClassName('theme-element');
 
 const mainContentElement = document.getElementById('main-content')
 const inputContainerElement = document.getElementById('input-container');
@@ -127,6 +128,12 @@ settingsSaveAndCloseButton.addEventListener('click', () => {
     settingsMenuElement.style.display = 'none';
     mainContentElement.style.filter = '';
     inputFieldElement.focus();
+})
+
+Array.from(settingsThemeElements).forEach(themeElement => {
+    themeElement.addEventListener('click', () => {
+        themeElement.classList.add('theme-selected');
+    })
 })
 
 

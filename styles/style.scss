@@ -57,10 +57,6 @@ button {
         #settings-header {
             padding-bottom: 16px;
         }
-
-        #settings-button-container {
-            padding-top: 16px;
-        }
         
         .settings-subcontainer {
             gap: 8px;
@@ -70,11 +66,13 @@ button {
 
         #settings-wordcount {
             display: flex;
+
+            #word-count-list {
+                display: flex;
+                gap: 8px;
+            }
         }
 
-        #word-count-list {
-            display: flex;
-        }
 
         #appearance-label {
             padding-bottom: 1em;
@@ -95,6 +93,7 @@ button {
                 background-color: #40D84F;
                 border-radius: 8px;
                 cursor: pointer;
+                user-select: none;
             }
 
             .solarized-font {
@@ -182,6 +181,7 @@ button {
         #settings-button-container {
             display: flex;
             justify-content: flex-end;
+            padding-top: 16px;
 
             button {
                 border: none;

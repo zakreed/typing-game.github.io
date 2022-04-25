@@ -60,10 +60,6 @@ button {
   padding-bottom: 16px;
 }
 
-#parent-div #settings-menu #settings-button-container {
-  padding-top: 16px;
-}
-
 #parent-div #settings-menu .settings-subcontainer {
   gap: 8px;
   padding-top: 16px;
@@ -76,10 +72,11 @@ button {
   display: flex;
 }
 
-#parent-div #settings-menu #word-count-list {
+#parent-div #settings-menu #settings-wordcount #word-count-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 8px;
 }
 
 #parent-div #settings-menu #appearance-label {
@@ -104,6 +101,10 @@ button {
   background-color: #40D84F;
   border-radius: 8px;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 #parent-div #settings-menu #themes-container .solarized-font {
@@ -212,6 +213,7 @@ button {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  padding-top: 16px;
 }
 
 #parent-div #settings-menu #settings-button-container button {
