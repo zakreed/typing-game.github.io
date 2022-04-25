@@ -63,14 +63,21 @@ button {
         }
         
         .settings-subcontainer {
-            display: flex;
             gap: 8px;
             padding-top: 16px;
             padding-bottom: 16px;
         }
 
+        #settings-wordcount {
+            display: flex;
+        }
+
         #word-count-list {
             display: flex;
+        }
+
+        #appearance-label {
+            padding-bottom: 1em;
         }
 
         #themes-container {

@@ -65,18 +65,25 @@ button {
 }
 
 #parent-div #settings-menu .settings-subcontainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   gap: 8px;
   padding-top: 16px;
   padding-bottom: 16px;
+}
+
+#parent-div #settings-menu #settings-wordcount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 #parent-div #settings-menu #word-count-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+#parent-div #settings-menu #appearance-label {
+  padding-bottom: 1em;
 }
 
 #parent-div #settings-menu #themes-container {
