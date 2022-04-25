@@ -82,6 +82,11 @@ button {
   gap: 12px;
 }
 
+#parent-div #settings-menu #settings-wordcount .wordcount-selected {
+  color: #40D84F;
+  text-decoration: underline;
+}
+
 #parent-div #settings-menu #appearance-label {
   padding-bottom: 1em;
 }

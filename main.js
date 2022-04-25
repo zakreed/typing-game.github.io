@@ -13,7 +13,7 @@ const restartButtonElement = document.getElementById('restart');
 const timerElement = document.getElementById('timer');
 const wpmElement = document.getElementById('wpm');
 
-let numberOfWords = 30;
+let numberOfWords = 25;
 let completed = false;
 let testHasStarted = false;
 let timerSeconds = 0;
@@ -129,6 +129,7 @@ settingsSaveAndCloseButton.addEventListener('click', () => {
     mainContentElement.style.filter = '';
     inputFieldElement.focus();
 })
+
 
 Array.from(settingsThemeElements).forEach(themeElement => {
     themeElement.addEventListener('click', () => {
