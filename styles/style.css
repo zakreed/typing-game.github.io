@@ -98,7 +98,6 @@ button {
   text-align: center;
   padding: 0.5em;
   padding: 15px 0;
-  background-color: #40D84F;
   border-radius: 8px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -112,7 +111,7 @@ button {
 }
 
 #parent-div #settings-menu #themes-container .theme-selected {
-  border: #40D84F solid;
+  border: #40D84F solid !important;
 }
 
 #parent-div #settings-menu #themes-container #theme-light {
@@ -136,7 +135,7 @@ button {
 #parent-div #settings-menu #themes-container #theme-white {
   color: black;
   background-color: white;
-  border: black solid;
+  border: #DFDFDF 1px solid;
 }
 
 #parent-div #settings-menu #themes-container #theme-white:hover {

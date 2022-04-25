@@ -90,7 +90,6 @@ button {
                 text-align: center;
                 padding: 0.5em;
                 padding: 15px 0;
-                background-color: #40D84F;
                 border-radius: 8px;
                 cursor: pointer;
                 user-select: none;
@@ -101,7 +100,7 @@ button {
             }
 
             .theme-selected {
-                border: #40D84F solid;
+                border: #40D84F solid !important;
             }
 
             #theme-light {
@@ -121,7 +120,7 @@ button {
             #theme-white {
                 color: black;
                 background-color: white;
-                border: black solid;
+                border: #DFDFDF 1px solid;
                 &:hover {
                     background-color: #F5F5F5;
                 }
