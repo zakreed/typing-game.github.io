@@ -75,11 +75,11 @@ button {
           justify-content: space-between;
 }
 
-#parent-div #settings-menu #settings-wordcount #word-count-list {
+#parent-div #settings-menu #settings-wordcount #wordcount-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 12px;
 }
 
 #parent-div #settings-menu #appearance-label {
