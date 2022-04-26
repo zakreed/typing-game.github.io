@@ -74,7 +74,7 @@ button {
             }
 
             .wordcount-selected {
-                color: #40D84F;
+                color: $correct;
                 text-decoration: underline;
             }
         }
@@ -106,7 +106,7 @@ button {
             }
 
             .theme-selected {
-                border: #40D84F solid !important;
+                border: $correct solid !important;
             }
 
             #theme-light {
@@ -194,7 +194,7 @@ button {
                 border-radius: 4px;
                 padding: 8px;
                 color: white;
-                background-color: #40D84F;
+                background-color: $correct;
                 box-shadow: rgba(149, 157, 165, 0.2) 4px 4px 12px;
                 &:hover {
                     background-color: #3CC84A;
@@ -272,10 +272,10 @@ button {
 }
 
 .correct {
-    color: #40D84F;
+    color: $correct;
 }
 
 .incorrect {
-    color: #FF2222;
-    background-color: #FFAEAE;
+    color: $incorrect;
+    background-color: $background-incorrect;
 }
