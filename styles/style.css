@@ -1,21 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 * {
-  font-family: 'Inter';
+  font-family: "Inter";
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
   background-color: #F5F5F5;
+  color: #000000;
 }
 
+svg {
+  fill: #000000;
+}
 svg:hover {
   fill: #414141;
 }
-
 svg:active {
   fill: #6B6B6B;
 }
@@ -30,75 +32,54 @@ button {
 }
 
 #parent-div {
-  display: -ms-grid;
   display: grid;
   place-items: center;
 }
-
 #parent-div #settings-menu {
   max-width: 40em;
   max-height: 50em;
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   z-index: 1;
   padding: 20px;
   background-color: white;
   border-radius: 12px;
-  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-
 #parent-div #settings-menu .bold-title {
   font-size: 1.2em;
   font-weight: 400;
 }
-
 #parent-div #settings-menu #settings-header {
   padding-bottom: 16px;
 }
-
 #parent-div #settings-menu .settings-subcontainer {
   gap: 8px;
   padding-top: 16px;
   padding-bottom: 16px;
 }
-
 #parent-div #settings-menu #settings-wordcount {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 #parent-div #settings-menu #settings-wordcount #wordcount-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 12px;
 }
-
 #parent-div #settings-menu #settings-wordcount .wordcount-selected {
   color: #40D84F;
   text-decoration: underline;
 }
-
 #parent-div #settings-menu #appearance-label {
   padding-bottom: 1em;
 }
-
 #parent-div #settings-menu #themes-container {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 8px;
 }
-
 #parent-div #settings-menu #themes-container .theme-element {
   width: 85px;
   height: 50px;
@@ -113,116 +94,88 @@ button {
       -ms-user-select: none;
           user-select: none;
 }
-
 #parent-div #settings-menu #themes-container .solarized-font {
   font-size: 11px;
 }
-
 #parent-div #settings-menu #themes-container .theme-selected {
   border: #40D84F solid !important;
 }
-
 #parent-div #settings-menu #themes-container #theme-light {
   color: black;
   background-color: #F5F5F5;
 }
-
 #parent-div #settings-menu #themes-container #theme-light:hover {
   background-color: #E2E2E2;
 }
-
 #parent-div #settings-menu #themes-container #theme-dark {
   color: white;
   background-color: #263238;
 }
-
 #parent-div #settings-menu #themes-container #theme-dark:hover {
   background-color: #151A1D;
 }
-
 #parent-div #settings-menu #themes-container #theme-white {
   color: black;
   background-color: white;
   border: #DFDFDF 1px solid;
 }
-
 #parent-div #settings-menu #themes-container #theme-white:hover {
   background-color: #F5F5F5;
 }
-
 #parent-div #settings-menu #themes-container #theme-black {
   color: white;
   background-color: black;
 }
-
 #parent-div #settings-menu #themes-container #theme-black:hover {
   background-color: #2B2B2B;
 }
-
 #parent-div #settings-menu #themes-container #theme-pastel {
   color: black;
   background-color: #FFF2F2;
 }
-
 #parent-div #settings-menu #themes-container #theme-pastel:hover {
   background-color: #F6D9D9;
 }
-
 #parent-div #settings-menu #themes-container #theme-nord-light {
   color: #2E3440;
   background-color: #E5E9f0;
 }
-
 #parent-div #settings-menu #themes-container #theme-nord-light:hover {
   background-color: #D8DEE9;
 }
-
 #parent-div #settings-menu #themes-container #theme-nord-dark {
   color: #ECEFF4;
   background-color: #3B4252;
 }
-
 #parent-div #settings-menu #themes-container #theme-nord-dark:hover {
   background-color: #2E3440;
 }
-
 #parent-div #settings-menu #themes-container #theme-solarized-light {
   color: black;
   background-color: #FDF6E3;
 }
-
 #parent-div #settings-menu #themes-container #theme-solarized-light:hover {
   background-color: #EEE8D5;
 }
-
 #parent-div #settings-menu #themes-container #theme-solarized-dark {
   color: white;
   background-color: #002B36;
 }
-
 #parent-div #settings-menu #themes-container #theme-solarized-dark:hover {
   background-color: #073642;
 }
-
 #parent-div #settings-menu #themes-container #theme-dracula {
   color: #BD93F9;
   background-color: #282A36;
 }
-
 #parent-div #settings-menu #themes-container #theme-dracula:hover {
   background-color: #44475A;
 }
-
 #parent-div #settings-menu #settings-button-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
   padding-top: 16px;
 }
-
 #parent-div #settings-menu #settings-button-container button {
   border: none;
   font-size: medium;
@@ -230,69 +183,39 @@ button {
   padding: 8px;
   color: white;
   background-color: #40D84F;
-  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 4px 4px 12px;
-          box-shadow: rgba(149, 157, 165, 0.2) 4px 4px 12px;
+  box-shadow: rgba(149, 157, 165, 0.2) 4px 4px 12px;
 }
-
 #parent-div #settings-menu #settings-button-container button:hover {
   background-color: #3CC84A;
 }
-
 #parent-div #main-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   height: 100vh;
   width: 100%;
   max-width: 64em;
 }
-
 #parent-div #main-content #navbar {
   padding: 1em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 #parent-div #main-content #navbar h1 {
   font-size: 1.5rem;
 }
-
 #parent-div #main-content #navbar .icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 1.5em;
 }
-
 #parent-div #main-content #input-container {
   padding: 1.5em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   gap: 4em;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
 }
-
 #parent-div #main-content #input-container #text-container {
   max-width: 30em;
   -webkit-user-select: none;
@@ -301,18 +224,11 @@ button {
           user-select: none;
   font-size: 1.5em;
 }
-
 #parent-div #main-content #input-container #reset-container {
   width: inherit;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
-
 #parent-div #main-content #input-container #input-field {
   z-index: -99;
   opacity: 0;
@@ -330,5 +246,4 @@ button {
 .incorrect {
   color: #FF2222;
   background-color: #FFAEAE;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

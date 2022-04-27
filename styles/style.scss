@@ -1,6 +1,6 @@
+@use './variables.scss';
 @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-@import './variables.scss';
 
 * {
     font-family: 'Inter';
@@ -10,11 +10,13 @@
 }
 
 body {
-    background-color: $background;
-    // filter: blur(3px);
+    background-color: variables.$background;
+    color: variables.$primary;
 }
 
 svg {
+    fill: variables.$primary;
+
     &:hover {
         fill: #414141;
     }
@@ -29,7 +31,7 @@ button {
 }
 
 .button-main {
-    background-color: $background;
+    background-color: variables.$background;
 }
 
 #parent-div {
@@ -74,7 +76,7 @@ button {
             }
 
             .wordcount-selected {
-                color: $correct;
+                color: variables.$correct;
                 text-decoration: underline;
             }
         }
@@ -106,7 +108,7 @@ button {
             }
 
             .theme-selected {
-                border: $correct solid !important;
+                border: variables.$correct solid !important;
             }
 
             #theme-light {
@@ -194,7 +196,7 @@ button {
                 border-radius: 4px;
                 padding: 8px;
                 color: white;
-                background-color: $correct;
+                background-color: variables.$correct;
                 box-shadow: rgba(149, 157, 165, 0.2) 4px 4px 12px;
                 &:hover {
                     background-color: #3CC84A;
@@ -272,10 +274,10 @@ button {
 }
 
 .correct {
-    color: $correct;
+    color: variables.$correct;
 }
 
 .incorrect {
-    color: $incorrect;
-    background-color: $background-incorrect;
+    color: variables.$incorrect;
+    background-color: variables.$background-incorrect;
 }
