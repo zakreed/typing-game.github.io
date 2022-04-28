@@ -73,6 +73,12 @@ button {
             #wordcount-list {
                 display: flex;
                 gap: 12px;
+                cursor: pointer;
+
+                .wordcount-selected {
+                    color: $correct;
+                    text-decoration: underline;
+                }
             }
 
             .wordcount-selected {

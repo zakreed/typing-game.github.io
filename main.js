@@ -3,6 +3,7 @@ import {words} from './words.js';
 const settingsButtonElement = document.getElementById('icon-settings');
 const settingsMenuElement = document.getElementById('settings-menu');
 const settingsSaveAndCloseButton = document.getElementById('button-close-settings');
+const settingsWordcoundElements = document.getElementsByClassName('wordcount-element');
 const settingsThemeElements = document.getElementsByClassName('theme-element');
 
 const mainContentElement = document.getElementById('main-content')
@@ -104,7 +105,6 @@ const calculateWPM = () => {
     let words = correctCharacters / 5;
     let wpm = Math.floor(words / (timerSeconds / 60));
     wpmElement.innerText = `${wpm} wpm`;
-    console.log(timerSeconds);
 }
 
 restartButtonElement.addEventListener('click', () => {
@@ -137,6 +137,11 @@ Array.from(settingsThemeElements).forEach(themeElement => {
     })
 })
 
+Array.from(settingsWordcoundElements).forEach(wordcountElement => {
+    wordcountElement.addEventListener('click', () => {
+        wordcountElement.classList.add('wordcount-selected');
+    })
+})
 
 inputContainerElement.addEventListener('click', () => inputFieldElement.focus());
 
