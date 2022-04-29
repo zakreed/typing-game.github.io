@@ -133,12 +133,15 @@ settingsSaveAndCloseButton.addEventListener('click', () => {
 
 Array.from(settingsThemeElements).forEach(themeElement => {
     themeElement.addEventListener('click', () => {
+        Array.from(settingsThemeElements).forEach(themeElement => themeElement.classList.remove('theme-selected'));
         themeElement.classList.add('theme-selected');
     })
 })
 
 Array.from(settingsWordcoundElements).forEach(wordcountElement => {
     wordcountElement.addEventListener('click', () => {
+        settingsWordcoundElements.classList.remove('wordcount-selected');
+        console.log('hello there basdf');
         wordcountElement.classList.add('wordcount-selected');
     })
 })
