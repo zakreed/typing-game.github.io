@@ -40,6 +40,8 @@ const startTest = () => {
 
 const generateText = () => {
     let textToType = '';
+
+    textContainerElement.innerText = '';
     
     for(let i = 0; i < numberOfWords; i++) {
         textToType += (words[Math.floor(Math.random() * words.length)] + ' ');
@@ -109,7 +111,6 @@ const calculateWPM = () => {
 
 restartButtonElement.addEventListener('click', () => {
     inputFieldElement.value = '';
-    textContainerElement.innerText = '';
     wpmElement.innerText = '';
     completed = false;
     testHasStarted = false;
@@ -134,6 +135,8 @@ Array.from(settingsWordcoundElements).forEach(wordcountElement => {
     wordcountElement.addEventListener('click', () => {
         Array.from(settingsWordcoundElements).forEach(wordcountElement => wordcountElement.classList.remove('wordcount-selected'));
         wordcountElement.classList.add('wordcount-selected');
+        numberOfWords = wordcountElement.innerText;
+        generateText();
     })
 })
 
@@ -155,5 +158,5 @@ inputFieldElement.addEventListener('select', function() {
     this.selectionStart = this.selectionEnd;
   }, false);
 
-  generateText();
-  settingsMenuElement.style.display = 'none';
+generateText();
+settingsMenuElement.style.display = 'none';
