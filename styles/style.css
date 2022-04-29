@@ -68,7 +68,12 @@ button {
   display: flex;
   gap: 12px;
 }
-#parent-div #settings-menu #settings-wordcount .wordcount-selected {
+#parent-div #settings-menu #settings-wordcount #wordcount-list .wordcount-element {
+  background-color: #FFFFFF;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+#parent-div #settings-menu #settings-wordcount #wordcount-list .wordcount-selected {
   color: #40D84F;
   text-decoration: underline;
 }
@@ -89,10 +94,7 @@ button {
   padding: 15px 0;
   border-radius: 8px;
   cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 #parent-div #settings-menu #themes-container .solarized-font {
   font-size: 11px;
@@ -218,10 +220,7 @@ button {
 }
 #parent-div #main-content #input-container #text-container {
   max-width: 30em;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   font-size: 1.5em;
 }
 #parent-div #main-content #input-container #reset-container {
@@ -246,4 +245,6 @@ button {
 .incorrect {
   color: #FF2222;
   background-color: #FFAEAE;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

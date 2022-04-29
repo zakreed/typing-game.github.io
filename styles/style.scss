@@ -73,17 +73,17 @@ button {
             #wordcount-list {
                 display: flex;
                 gap: 12px;
-                cursor: pointer;
+
+                .wordcount-element {
+                    background-color: variables.$settings;
+                    cursor: pointer;
+                    font-size: 1.1em;
+                }
 
                 .wordcount-selected {
-                    color: $correct;
+                    color: variables.$correct;
                     text-decoration: underline;
                 }
-            }
-
-            .wordcount-selected {
-                color: variables.$correct;
-                text-decoration: underline;
             }
         }
 
