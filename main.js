@@ -109,13 +109,17 @@ const calculateWPM = () => {
     wpmElement.innerText = `${wpm} wpm`;
 }
 
-restartButtonElement.addEventListener('click', () => {
+const restartGame = () => {
     inputFieldElement.value = '';
     wpmElement.innerText = '';
     completed = false;
     testHasStarted = false;
     stopTimer();
     generateText();
+}
+
+restartButtonElement.addEventListener('click', () => {
+    restartGame();
     inputFieldElement.focus();
 });
 
@@ -136,7 +140,7 @@ Array.from(settingsWordcoundElements).forEach(wordcountElement => {
         Array.from(settingsWordcoundElements).forEach(wordcountElement => wordcountElement.classList.remove('wordcount-selected'));
         wordcountElement.classList.add('wordcount-selected');
         numberOfWords = wordcountElement.innerText;
-        generateText();
+        restartGame();
     })
 })
 
