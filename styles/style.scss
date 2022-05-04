@@ -18,19 +18,14 @@ $incorrect-background: var(--incorrect-background);
     box-sizing: border-box;
 }
 
-body {
-    // background-color: $bg-color;
-    color: variables.$primary;
-}
-
 svg {
-    fill: variables.$primary;
+    fill: $text;
 
     &:hover {
-        fill: #414141;
+        fill: $hover;
     }
     &:active {
-        fill: #6B6B6B;
+        fill: $click;
     }
 }
 
@@ -40,7 +35,7 @@ button {
 }
 
 .button-main {
-    background-color: variables.$background;
+    background-color: $background;
 }
 
 #parent-div {
@@ -57,9 +52,10 @@ button {
         transform: translate(-50%, -50%);
         z-index: 1;
         padding: 20px;
-        background-color: white;
+        background-color: $background-settings;
         border-radius: 12px;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        color: $text;
 
         .bold-title {
             font-size: 1.2em;
@@ -85,13 +81,14 @@ button {
                 gap: 12px;
 
                 .wordcount-element {
-                    background-color: variables.$settings;
+                    background-color: $background-settings;
+                    color: $text;
                     cursor: pointer;
                     font-size: 1.1em;
                 }
 
                 .wordcount-selected {
-                    color: variables.$correct;
+                    color: $correct;
                     text-decoration: underline;
                 }
             }
@@ -124,7 +121,7 @@ button {
             }
 
             .theme-selected {
-                border: variables.$correct solid !important;
+                border: $correct solid !important;
             }
 
             #theme-light {
@@ -212,7 +209,7 @@ button {
                 border-radius: 4px;
                 padding: 8px;
                 color: white;
-                background-color: variables.$correct;
+                background-color: $correct;
                 box-shadow: rgba(149, 157, 165, 0.2) 4px 4px 12px;
                 &:hover {
                     background-color: #3CC84A;
@@ -228,6 +225,7 @@ button {
         height: 100vh;
         width: 100%;
         max-width: 64em;
+        color: $text;
         // filter: blur(3px);
         
         #navbar {
@@ -290,10 +288,10 @@ button {
 }
 
 .correct {
-    color: variables.$correct;
+    color: $correct;
 }
 
 .incorrect {
-    color: variables.$incorrect;
-    background-color: variables.$background-incorrect;
+    color: $incorrect;
+    background-color: $incorrect-background;
 }

@@ -29,18 +29,14 @@
   box-sizing: border-box;
 }
 
-body {
-  color: #000000;
-}
-
 svg {
-  fill: #000000;
+  fill: var(--text);
 }
 svg:hover {
-  fill: #414141;
+  fill: var(--hover);
 }
 svg:active {
-  fill: #6B6B6B;
+  fill: var(--click);
 }
 
 button {
@@ -49,7 +45,7 @@ button {
 }
 
 .button-main {
-  background-color: #F5F5F5;
+  background-color: var(--background);
 }
 
 #parent-div {
@@ -66,9 +62,10 @@ button {
   transform: translate(-50%, -50%);
   z-index: 1;
   padding: 20px;
-  background-color: white;
+  background-color: var(--background-settings);
   border-radius: 12px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  color: var(--text);
 }
 #parent-div #settings-menu .bold-title {
   font-size: 1.2em;
@@ -91,12 +88,13 @@ button {
   gap: 12px;
 }
 #parent-div #settings-menu #settings-wordcount #wordcount-list .wordcount-element {
-  background-color: #FFFFFF;
+  background-color: var(--background-settings);
+  color: var(--text);
   cursor: pointer;
   font-size: 1.1em;
 }
 #parent-div #settings-menu #settings-wordcount #wordcount-list .wordcount-selected {
-  color: #40D84F;
+  color: var(--correct);
   text-decoration: underline;
 }
 #parent-div #settings-menu #appearance-label {
@@ -122,7 +120,7 @@ button {
   font-size: 11px;
 }
 #parent-div #settings-menu #themes-container .theme-selected {
-  border: #40D84F solid !important;
+  border: var(--correct) solid !important;
 }
 #parent-div #settings-menu #themes-container #theme-light {
   color: black;
@@ -206,7 +204,7 @@ button {
   border-radius: 4px;
   padding: 8px;
   color: white;
-  background-color: #40D84F;
+  background-color: var(--correct);
   box-shadow: rgba(149, 157, 165, 0.2) 4px 4px 12px;
 }
 #parent-div #settings-menu #settings-button-container button:hover {
@@ -218,6 +216,7 @@ button {
   height: 100vh;
   width: 100%;
   max-width: 64em;
+  color: var(--text);
 }
 #parent-div #main-content #navbar {
   padding: 1em;
@@ -261,12 +260,12 @@ button {
 }
 
 .correct {
-  color: #40D84F;
+  color: var(--correct);
 }
 
 .incorrect {
-  color: #FF2222;
-  background-color: #FFAEAE;
+  color: var(--incorrect);
+  background-color: var(--incorrect-background);
 }
 
 /*# sourceMappingURL=style.css.map */
