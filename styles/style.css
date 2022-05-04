@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+:root {
+  --background: #F5F5F5;
+  --background-settings: #FFFFFF;
+  --text: #000000;
+  --hover: #212121;
+  --click: #424242;
+  --correct: #40D84F;
+  --incorrect: #FF2222;
+  --incorrect-background: #FFAEAE;
+}
+
 .theme-light {
   --background: #F5F5F5;
   --background-settings: #FFFFFF;

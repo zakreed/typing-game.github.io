@@ -1,3 +1,14 @@
+:root {
+  --background: #F5F5F5;
+  --background-settings: #FFFFFF;
+  --text: #000000;
+  --hover: #212121;
+  --click: #424242;
+  --correct: #40D84F;
+  --incorrect: #FF2222;
+  --incorrect-background: #FFAEAE;
+}
+
 .theme-light {
   --background: #F5F5F5;
   --background-settings: #FFFFFF;
@@ -17,7 +28,7 @@
   --click: #F5F5F5;
   --correct: #40D84F;
   --incorrect: #FF2222;
-  --incorrect-background: #C41F1F;
+  --incorrect-background: #614147;
 }
 
 /*# sourceMappingURL=variables.css.map */

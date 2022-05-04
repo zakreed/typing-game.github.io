@@ -1,9 +1,13 @@
-$background: #F5F5F5;
-$primary: #000000;
-$settings: #FFFFFF;
-$correct: #40D84F;
-$incorrect: #FF2222;
-$background-incorrect: #FFAEAE;
+:root {
+    --background: #F5F5F5;
+    --background-settings: #FFFFFF;
+    --text: #000000;
+    --hover: #212121;
+    --click: #424242;
+    --correct: #40D84F;
+    --incorrect: #FF2222;
+    --incorrect-background: #FFAEAE;
+}
 
 .theme-light {
     --background: #F5F5F5;

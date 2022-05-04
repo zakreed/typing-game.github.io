@@ -6,6 +6,7 @@ const settingsSaveAndCloseButton = document.getElementById('button-close-setting
 const settingsWordcoundElements = document.getElementsByClassName('wordcount-element');
 const settingsThemeElements = document.getElementsByClassName('theme-element');
 
+const parentDivElement = document.getElementById('parent-div');
 const mainContentElement = document.getElementById('main-content')
 const inputContainerElement = document.getElementById('input-container');
 const textContainerElement = document.getElementById('text-container');
@@ -20,6 +21,8 @@ let testHasStarted = false;
 let timerSeconds = 0;
 let startTimeDate;
 let timer;
+
+console.log(settingsWordcoundElements);
 
 const startTimer = () => {
     timerSeconds = 0;
@@ -148,10 +151,12 @@ Array.from(settingsThemeElements).forEach(themeElement => {
     themeElement.addEventListener('click', () => {
         Array.from(settingsThemeElements).forEach(themeElement => themeElement.classList.remove('theme-selected'));
         themeElement.classList.add('theme-selected');
+        parentDivElement.className = themeElement.id;
     })
 })
 
 inputContainerElement.addEventListener('click', () => inputFieldElement.focus());
+
 
 // prevent the user from highlighting or pasting text into the input field
 inputFieldElement.onpaste = (e) => {
