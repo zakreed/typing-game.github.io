@@ -1,5 +1,23 @@
+.theme-light {
+  --background: #F5F5F5;
+  --background-settings: #FFFFFF;
+  --text: #000000;
+  --hover: #212121;
+  --click: #424242;
+  --correct: #40D84F;
+  --incorrect: #FF2222;
+  --incorrect-background: #FFAEAE;
+}
+
 .theme-dark {
-  --background-color: #263238;
+  --background: #263238;
+  --background-settings: #000000;
+  --text: #FFFFFF;
+  --hover: #E0E0E0;
+  --click: #F5F5F5;
+  --correct: #40D84F;
+  --incorrect: #FF2222;
+  --incorrect-background: #C41F1F;
 }
 
 /*# sourceMappingURL=variables.css.map */
