@@ -2,6 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
+$background: var(--background);
+$background-settings: var(--background-settings);
+$text: var(--text);
+$hover: var(--hover);
+$click: var(--click);
+$correct: var(--correct);
+$incorrect: var(--incorrect);
+$incorrect-background: var(--incorrect-background);
+
 * {
     font-family: 'Inter';
     padding: 0;
@@ -10,7 +19,7 @@
 }
 
 body {
-    background-color: variables.$background;
+    // background-color: $bg-color;
     color: variables.$primary;
 }
 
@@ -35,6 +44,7 @@ button {
 }
 
 #parent-div {
+    background-color: $background;
     display: grid;
     place-items: center;
 

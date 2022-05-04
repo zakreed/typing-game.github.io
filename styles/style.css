@@ -1,5 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+.theme-light {
+  --background: #F5F5F5;
+  --background-settings: #FFFFFF;
+  --text: #000000;
+  --hover: #212121;
+  --click: #424242;
+  --correct: #40D84F;
+  --incorrect: #FF2222;
+  --incorrect-background: #FFAEAE;
+}
+
+.theme-dark {
+  --background: #263238;
+  --background-settings: #000000;
+  --text: #FFFFFF;
+  --hover: #E0E0E0;
+  --click: #F5F5F5;
+  --correct: #40D84F;
+  --incorrect: #FF2222;
+  --incorrect-background: #FFAEAE;
+}
+
 * {
   font-family: "Inter";
   padding: 0;
@@ -8,7 +30,6 @@
 }
 
 body {
-  background-color: #F5F5F5;
   color: #000000;
 }
 
@@ -32,6 +53,7 @@ button {
 }
 
 #parent-div {
+  background-color: var(--background);
   display: grid;
   place-items: center;
 }
