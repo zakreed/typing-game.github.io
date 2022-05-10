@@ -30,3 +30,25 @@
     --incorrect: #FF2222;
     --incorrect-background: #614147;
 }
+
+.theme-white {
+    --background: #FFFFFF;
+    --background-settings: #FFFFFF;
+    --text: #000000;
+    --hover: #212121;
+    --click: #424242;
+    --correct: #00FF00;
+    --incorrect: #FF0000;
+    --incorrect-background: #FFAEAE;
+}
+
+.theme-black {
+    --background: #000000;
+    --background-settings: #000000;
+    --text: #FFFFFF;
+    --hover: #E0E0E0;
+    --click: #F5F5F5;
+    --correct: #00FF00;
+    --incorrect: #FF0000;
+    --incorrect-background: #614147;
+}

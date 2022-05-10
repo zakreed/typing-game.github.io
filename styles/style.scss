@@ -252,9 +252,14 @@ button {
             gap: 4em;
             flex-grow: 1;
 
+            #wpm {
+                min-height: 20px;
+            }
+
         
             #text-container {
                 max-width: 30em;
+                min-height: 87px;
                 user-select: none;
                 font-size: 1.5em;
             }
