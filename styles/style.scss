@@ -226,7 +226,6 @@ button {
         width: 100%;
         max-width: 64em;
         color: $text;
-        // filter: blur(3px);
         
         #navbar {
             padding: 1em;
@@ -271,18 +270,9 @@ button {
             }
         
             #input-field {
-                // font-size: 16px;
-                // border: none;
-                // border-radius: 8px;
-                // width: 20em;
-                // padding:0.5em;
                 z-index: -99;
                 opacity: 0;
                 position: absolute;
-        
-                // &:focus {
-                //     outline: solid black 2px;
-                // }
             }
         }
     }
