@@ -44,7 +44,7 @@
   --incorrect-background: #FFAEAE;
 }
 
-.theme-black {
+.theme-matrix {
   --background: #000000;
   --background-settings: #000000;
   --text: #FFFFFF;
@@ -177,11 +177,11 @@ button {
 #parent-div #settings-menu #themes-container #theme-white:hover {
   background-color: #F5F5F5;
 }
-#parent-div #settings-menu #themes-container #theme-black {
+#parent-div #settings-menu #themes-container #theme-matrix {
   color: white;
   background-color: black;
 }
-#parent-div #settings-menu #themes-container #theme-black:hover {
+#parent-div #settings-menu #themes-container #theme-matrix:hover {
   background-color: #2B2B2B;
 }
 #parent-div #settings-menu #themes-container #theme-pastel {
