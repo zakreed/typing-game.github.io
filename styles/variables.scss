@@ -2,8 +2,10 @@
     --background: #F5F5F5;
     --background-settings: #FFFFFF;
     --text: #000000;
-    --hover: #212121;
-    --click: #424242;
+    --untyped: #000000;
+    --svg-hover: #212121;
+    --svg-click: #424242;
+    --save-hover: #3CC84A;
     --correct: #40D84F;
     --incorrect: #FF2222;
     --incorrect-background: #FFAEAE;
@@ -13,8 +15,9 @@
     --background: #F5F5F5;
     --background-settings: #FFFFFF;
     --text: #000000;
-    --hover: #212121;
-    --click: #424242;
+    --untyped: #000000;
+    --svg-hover: #212121;
+    --svg-click: #424242;
     --correct: #40D84F;
     --incorrect: #FF2222;
     --incorrect-background: #FFAEAE;
@@ -24,8 +27,9 @@
     --background: #263238;
     --background-settings: #37474F;
     --text: #FFFFFF;
-    --hover: #E0E0E0;
-    --click: #F5F5F5;
+    --untyped: #FFFFFF;
+    --svg-hover: #E0E0E0;
+    --svg-click: #F5F5F5;
     --correct: #40D84F;
     --incorrect: #FF2222;
     --incorrect-background: #614147;
@@ -35,8 +39,9 @@
     --background: #FFFFFF;
     --background-settings: #FFFFFF;
     --text: #000000;
-    --hover: #212121;
-    --click: #424242;
+    --untyped: #000000;
+    --svg-hover: #212121;
+    --svg-click: #424242;
     --correct: #00FF00;
     --incorrect: #FF0000;
     --incorrect-background: #FFAEAE;
@@ -45,10 +50,23 @@
 .theme-matrix {
     --background: #000000;
     --background-settings: #000000;
-    --text: #FFFFFF;
-    --hover: #E0E0E0;
-    --click: #F5F5F5;
+    --text: #00FF00;
+    --untyped: #FFFFFF;
+    --svg-hover: #6afc6a;
+    --svg-click: #8dfc8d;
     --correct: #00FF00;
     --incorrect: #FF0000;
-    --incorrect-background: #614147;
+    --incorrect-background: #3a0000;
+}
+
+.theme-pastel {
+    --background: #F5F5F5;
+    --background-settings: #FFFFFF;
+    --text: #000000;
+    --untyped: #000000;
+    --svg-hover: #212121;
+    --svg-click: #424242;
+    --correct: #40D84F;
+    --incorrect: #FF2222;
+    --incorrect-background: #FFAEAE;
 }

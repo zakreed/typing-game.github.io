@@ -5,8 +5,9 @@
 $background: var(--background);
 $background-settings: var(--background-settings);
 $text: var(--text);
-$hover: var(--hover);
-$click: var(--click);
+$untyped: var(--untyped);
+$svg-hover: var(--svg-hover);
+$svg-click: var(--svg-click);
 $correct: var(--correct);
 $incorrect: var(--incorrect);
 $incorrect-background: var(--incorrect-background);
@@ -22,10 +23,10 @@ svg {
     fill: $text;
 
     &:hover {
-        fill: $hover;
+        fill: $svg-hover;
     }
     &:active {
-        fill: $click;
+        fill: $svg-click;
     }
 }
 
@@ -147,7 +148,7 @@ button {
                 }
             }
             #theme-matrix {
-                color: white;
+                color: #00FF00;
                 background-color: black;
                 &:hover {
                     background-color: #2B2B2B;
@@ -261,6 +262,7 @@ button {
                 min-height: 87px;
                 user-select: none;
                 font-size: 1.5em;
+                color: $untyped;
             }
 
             #reset-container {
