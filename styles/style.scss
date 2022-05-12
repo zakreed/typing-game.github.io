@@ -8,6 +8,8 @@ $text: var(--text);
 $untyped: var(--untyped);
 $svg-hover: var(--svg-hover);
 $svg-click: var(--svg-click);
+$save-hover: var(--save-hover);
+$save-click: var(--save-click);
 $correct: var(--correct);
 $incorrect: var(--incorrect);
 $incorrect-background: var(--incorrect-background);
@@ -213,7 +215,10 @@ button {
                 background-color: $correct;
                 box-shadow: rgba(149, 157, 165, 0.2) 4px 4px 12px;
                 &:hover {
-                    background-color: #3CC84A;
+                    background-color: $save-hover;
+                }
+                &:active {
+                    background-color: $save-click;
                 }
             }
         }
