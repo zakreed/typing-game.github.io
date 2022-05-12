@@ -16,7 +16,13 @@ jobs:
       - name: install-sass
         run: npm install -g sass
       - name: build-css
-        run: sass styles:styles
+        run: sass styles:build/styles
+      - name: move-to-build
+        run: |
+          mv assets build/assets
+          mv index.html build/
+          mv main.js build/
+          mv words.js build/
       - name: deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
