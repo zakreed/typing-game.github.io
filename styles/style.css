@@ -49,6 +49,8 @@
   --untyped: #000000;
   --svg-hover: #212121;
   --svg-click: #424242;
+  --save-hover: #3CC84A;
+  --save-click: #64E071;
   --correct: #00FF00;
   --incorrect: #FF0000;
   --incorrect-background: #FFAEAE;
@@ -61,19 +63,23 @@
   --untyped: #FFFFFF;
   --svg-hover: #6afc6a;
   --svg-click: #8dfc8d;
+  --save-hover: #3CC84A;
+  --save-click: #64E071;
   --correct: #00FF00;
   --incorrect: #FF0000;
   --incorrect-background: #3A0000;
 }
 
 .theme-pastel {
-  --background: #F5F5F5;
-  --background-settings: #FFFFFF;
+  --background: #F6D9D9;
+  --background-settings: #F6E1E1;
   --text: #000000;
   --untyped: #000000;
   --svg-hover: #212121;
   --svg-click: #424242;
-  --correct: #40D84F;
+  --save-hover: #3CC84A;
+  --save-click: #64E071;
+  --correct: #3EABD4;
   --incorrect: #FF2222;
   --incorrect-background: #FFAEAE;
 }
@@ -209,10 +215,10 @@ button {
 }
 #parent-div #settings-menu #themes-container #theme-pastel {
   color: black;
-  background-color: #FFF2F2;
+  background-color: #F6D9D9;
 }
 #parent-div #settings-menu #themes-container #theme-pastel:hover {
-  background-color: #F6D9D9;
+  background-color: #D8B4B4;
 }
 #parent-div #settings-menu #themes-container #theme-nord-light {
   color: #2E3440;
