@@ -22,7 +22,6 @@ let timerSeconds = 0;
 let startTimeDate;
 let timer;
 
-console.log(settingsWordcoundElements);
 
 const startTimer = () => {
     timerSeconds = 0;
