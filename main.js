@@ -121,7 +121,6 @@ const calculateWPM = () => {
 const calculateAccuracy = () => {
     const numCorrectLetters = correctChars();
     const numLetters = textContainerElement.querySelectorAll('span').length;
-    console.log(numCorrectLetters, numLetters);
     return `Accuracy: ${Math.round((numCorrectLetters / numLetters) * 100)}%`;
 };
 
