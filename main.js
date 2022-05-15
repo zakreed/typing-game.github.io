@@ -22,7 +22,6 @@ let timerSeconds = 0;
 let startTimeDate;
 let timer;
 
-console.log(settingsWordcoundElements);
 
 const startTimer = () => {
     timerSeconds = 0;
@@ -93,24 +92,37 @@ inputFieldElement.addEventListener('input', () => {
     if (inputArray.length == textArray.length) {
         completed = true;
         stopTimer();
-        calculateWPM();
+        wpmElement.innerText = `
+            ${calculateWPM()}
+            ${calculateAccuracy()}
+        `
     }
 })
 
-const calculateWPM = () => {
+const numCorrectChars = () => {
+    // function to calculate the number of correctly typed characters
     const wpmTextArray = textContainerElement.querySelectorAll('span');
-    let correctCharacters = 0;
 
+    let correctCharacters = 0;
     wpmTextArray.forEach(element => {
         if (element.classList.contains('correct')) {
             correctCharacters++;
         }
     });
-
-    let words = correctCharacters / 5;
-    let wpm = Math.floor(words / (timerSeconds / 60));
-    wpmElement.innerText = `${wpm} wpm`;
+    return correctCharacters;
 }
+
+const calculateWPM = () => {
+    const timeTaken = (timerSeconds / 60);
+    const wordsPerMinute = numberOfWords / timeTaken;
+    return `${Math.round(wordsPerMinute)} wpm`;
+}
+
+const calculateAccuracy = () => {
+    const numCorrectLetters = numCorrectChars();
+    const numLetters = textContainerElement.querySelectorAll('span').length;
+    return `Accuracy: ${Math.round((numCorrectLetters / numLetters) * 100)}%`;
+};
 
 const restartGame = () => {
     inputFieldElement.value = '';
