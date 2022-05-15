@@ -99,7 +99,7 @@ inputFieldElement.addEventListener('input', () => {
     }
 })
 
-const correctChars = () => {
+const numCorrectChars = () => {
     // function to calculate the number of correctly typed characters
     const wpmTextArray = textContainerElement.querySelectorAll('span');
 
@@ -119,7 +119,7 @@ const calculateWPM = () => {
 }
 
 const calculateAccuracy = () => {
-    const numCorrectLetters = correctChars();
+    const numCorrectLetters = numCorrectChars();
     const numLetters = textContainerElement.querySelectorAll('span').length;
     return `Accuracy: ${Math.round((numCorrectLetters / numLetters) * 100)}%`;
 };
