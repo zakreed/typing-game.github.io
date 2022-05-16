@@ -98,6 +98,20 @@
   --incorrect-background: #ECCDD9;
 }
 
+.theme-nord-dark {
+  --background: #2E3440;
+  --background-settings: #3B4252;
+  --text: #ECEff4;
+  --untyped: #ECEff4;
+  --svg-hover: #E5E9F0;
+  --svg-click: #D8DEE9;
+  --save-hover: #9CB884;
+  --save-click: #94B17C;
+  --correct: #A3BE8C;
+  --incorrect: #BF616A;
+  --incorrect-background: #4B3334;
+}
+
 * {
   font-family: "Inter";
   padding: 0;
