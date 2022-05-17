@@ -127,6 +127,7 @@ const calculateAccuracy = () => {
 const restartGame = () => {
     inputFieldElement.value = '';
     wpmElement.innerText = '';
+    accuracyElement.innerText = '';
     completed = false;
     testHasStarted = false;
     stopTimer();
