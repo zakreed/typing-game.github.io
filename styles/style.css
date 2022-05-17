@@ -331,8 +331,12 @@ button {
   gap: 4em;
   flex-grow: 1;
 }
-#parent-div #main-content #input-container #wpm {
+#parent-div #main-content #input-container #results-container {
+  display: flex;
   min-height: 20px;
+}
+#parent-div #main-content #input-container #results-container div {
+  margin: 0 16px;
 }
 #parent-div #main-content #input-container #text-container {
   max-width: 30em;
