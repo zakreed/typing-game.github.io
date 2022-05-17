@@ -13,7 +13,9 @@ const textContainerElement = document.getElementById('text-container');
 const inputFieldElement = document.getElementById('input-field');
 const restartButtonElement = document.getElementById('restart');
 const timerElement = document.getElementById('timer');
+const resultsContainerElement =  document.getElementById('results-container');
 const wpmElement = document.getElementById('wpm');
+const accuracyElement = document.getElementById('accuracy');
 
 let numberOfWords = 25;
 let completed = false;
@@ -92,10 +94,8 @@ inputFieldElement.addEventListener('input', () => {
     if (inputArray.length == textArray.length) {
         completed = true;
         stopTimer();
-        wpmElement.innerText = `
-            ${calculateWPM()}
-            ${calculateAccuracy()}
-        `
+        wpmElement.innerText = `${calculateWPM()}`;
+        accuracyElement.innerText = `${calculateAccuracy()}`;
     }
 })
 
