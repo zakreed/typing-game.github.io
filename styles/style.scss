@@ -255,9 +255,14 @@ button {
             flex-direction: column;
             gap: 4em;
             flex-grow: 1;
-
-            #wpm {
+            
+            #results-container {
+                display: flex;
                 min-height: 20px;
+
+                div {
+                    margin: 0 16px;
+                }
             }
 
         
