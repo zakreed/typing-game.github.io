@@ -205,9 +205,6 @@ button {
   cursor: pointer;
   user-select: none;
 }
-#parent-div #settings-menu #themes-container .solarized-font {
-  font-size: 11px;
-}
 #parent-div #settings-menu #themes-container .theme-selected {
   border: var(--correct) solid !important;
 }
