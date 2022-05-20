@@ -110,4 +110,18 @@
   --incorrect-background: #4B3334;
 }
 
+.theme-solarized-light {
+  --background: #fdf6e3;
+  --background-settings: #eee8d5;
+  --text: #586e75;
+  --untyped: #586e75;
+  --svg-hover: #4A6168;
+  --svg-click: #3C535A;
+  --save-hover: #768800;
+  --save-click: #6D7E00;
+  --correct: #859900;
+  --incorrect: #dc322f;
+  --incorrect-background: #FDE6E3;
+}
+
 /*# sourceMappingURL=variables.css.map */
