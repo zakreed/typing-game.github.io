@@ -88,7 +88,6 @@ inputFieldElement.addEventListener('input', () => {
 
             textArray[index].classList.remove('current');
             if (inputArray.length === index) {
-                console.log('asdf');
                 textArray[index].classList.add('current');
             }
         })
