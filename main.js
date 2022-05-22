@@ -13,7 +13,6 @@ const textContainerElement = document.getElementById('text-container');
 const inputFieldElement = document.getElementById('input-field');
 const restartButtonElement = document.getElementById('restart');
 const timerElement = document.getElementById('timer');
-const resultsContainerElement =  document.getElementById('results-container');
 const wpmElement = document.getElementById('wpm');
 const accuracyElement = document.getElementById('accuracy');
 
@@ -88,7 +87,6 @@ inputFieldElement.addEventListener('input', () => {
 
             textArray[index].classList.remove('current');
             if (inputArray.length === index) {
-                console.log('asdf');
                 textArray[index].classList.add('current');
             }
         })
