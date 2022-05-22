@@ -380,4 +380,8 @@ button {
   background-color: var(--incorrect-background);
 }
 
+.current {
+  border-left: solid rgba(0, 0, 0, 0.5);
+}
+
 /*# sourceMappingURL=style.css.map */
