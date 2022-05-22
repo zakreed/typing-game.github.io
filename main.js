@@ -75,18 +75,15 @@ inputFieldElement.addEventListener('input', () => {
     if (!completed) {
         textArray.forEach((characterSpan, index) => {
             const character = inputArray[index];
-            
+
             if (character == null) {
-                characterSpan.classList.remove('correct');
-                characterSpan.classList.remove('incorrect');
+                characterSpan.className = '';
             }
             else if (character === characterSpan.innerText) {
                 characterSpan.classList.add('correct');
-                characterSpan.classList.remove('incorrect');
             }
             else {
                 characterSpan.classList.add('incorrect');
-                characterSpan.classList.remove('correct');
             }
         })
     }
