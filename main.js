@@ -85,6 +85,12 @@ inputFieldElement.addEventListener('input', () => {
             else {
                 characterSpan.classList.add('incorrect');
             }
+
+            textArray[index].classList.remove('current');
+            if (inputArray.length === index) {
+                console.log('asdf');
+                textArray[index].classList.add('current');
+            }
         })
     }
 

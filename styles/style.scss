@@ -297,3 +297,8 @@ button {
     color: $incorrect;
     background-color: $incorrect-background;
 }
+
+.current {
+    border-left: solid rgba(0, 0, 0, 0.5);
+
+}
