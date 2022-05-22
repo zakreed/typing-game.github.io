@@ -13,6 +13,7 @@ $save-click: var(--save-click);
 $correct: var(--correct);
 $incorrect: var(--incorrect);
 $incorrect-background: var(--incorrect-background);
+$caret: var(--caret);
 
 * {
     font-family: 'Inter';
@@ -299,6 +300,5 @@ button {
 }
 
 .current {
-    border-left: solid rgba(0, 0, 0, 0.5);
-
+    border-left: solid $caret;
 }
