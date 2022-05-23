@@ -72,24 +72,27 @@ inputFieldElement.addEventListener('input', () => {
     }
 
     if (!completed) {
-        textArray.forEach((characterSpan, index) => {
-            const character = inputArray[index];
+        for (const [index, characterSpan] of textArray.entries()) {
+            const inputCharacter = inputArray[index];
+            characterSpan.className = "";
 
-            if (character == null) {
-                characterSpan.className = '';
+            if (index === inputArray.length) {
+                characterSpan.classList.add('current');
             }
-            else if (character === characterSpan.innerText) {
+
+            // if the inputCharacter is undefined, we can just go to the next character
+            // since it can't be "correct" or "incorrect" as it hasn't been typed yet.
+            // this has to be after the cursor check since otherwise using backspace would
+            // leave a cursor hanging.
+            if (!inputCharacter) { continue }
+
+            if (inputCharacter === characterSpan.innerText) {
                 characterSpan.classList.add('correct');
             }
             else {
                 characterSpan.classList.add('incorrect');
             }
-
-            textArray[index].classList.remove('current');
-            if (inputArray.length === index) {
-                textArray[index].classList.add('current');
-            }
-        })
+        }
     }
 
     if (inputArray.length == textArray.length) {
