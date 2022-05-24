@@ -40,6 +40,7 @@
   --correct: #40D84F;
   --incorrect: #FF2222;
   --incorrect-background: #614147;
+  --caret: #CFCFCF;
 }
 
 .theme-white {
@@ -54,6 +55,7 @@
   --correct: #00FF00;
   --incorrect: #FF0000;
   --incorrect-background: #FFAEAE;
+  --caret: #000000;
 }
 
 .theme-matrix {
@@ -68,6 +70,7 @@
   --correct: #00FF00;
   --incorrect: #FF0000;
   --incorrect-background: #3A0000;
+  --caret: #00BB00;
 }
 
 .theme-pastel {
@@ -82,6 +85,7 @@
   --correct: #3EABD4;
   --incorrect: #FF6961;
   --incorrect-background: #FFAEAE;
+  --caret: #cb99c9;
 }
 
 .theme-nord-light {
@@ -96,6 +100,7 @@
   --correct: #A3BE8C;
   --incorrect: #BF616A;
   --incorrect-background: #ECCDD9;
+  --caret: #B48EAD;
 }
 
 .theme-nord-dark {
@@ -110,6 +115,7 @@
   --correct: #A3BE8C;
   --incorrect: #BF616A;
   --incorrect-background: #4B3334;
+  --caret: #B48EAD;
 }
 
 .theme-solarized-light {
@@ -119,11 +125,27 @@
   --untyped: #586e75;
   --svg-hover: #4A6168;
   --svg-click: #3C535A;
+  --save-hover: #23978E;
+  --save-click: #1E8D85;
+  --correct: #2aa198;
+  --incorrect: #dc322f;
+  --incorrect-background: #FDE6E3;
+  --caret: #859900;
+}
+
+.theme-solarized-dark {
+  --background: #002b36;
+  --background-settings: #073642;
+  --text: #839496;
+  --untyped: #839496;
+  --svg-hover: #77888A;
+  --svg-click: #6C7D7F;
   --save-hover: #768800;
   --save-click: #6D7E00;
   --correct: #859900;
   --incorrect: #dc322f;
-  --incorrect-background: #FDE6E3;
+  --incorrect-background: #360026;
+  --caret: #2aa198;
 }
 
 /*# sourceMappingURL=variables.css.map */
