@@ -301,4 +301,15 @@ button {
 
 .current {
     border-left: solid $caret;
+    animation: blink 1s step-end infinite;
 }
+
+@keyframes blink {
+    from,
+    to {
+        border-color: $caret;
+    }
+    50% {
+        border-color: transparent;
+    }
+  }
