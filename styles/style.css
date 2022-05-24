@@ -421,6 +421,16 @@ button {
 
 .current {
   border-left: solid var(--caret);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to {
+    border-color: var(--caret);
+  }
+  50% {
+    border-color: transparent;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
